@@ -21,7 +21,7 @@ RUN dotnet publish "UsbCopier.Api.csproj" -c Release -o /app/publish /p:UseAppHo
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-
+#qwe
 # Railway передаёт порт через переменную PORT
 ENV ASPNETCORE_URLS=http://+:${PORT:-8080}
 ENV ASPNETCORE_ENVIRONMENT=Production
